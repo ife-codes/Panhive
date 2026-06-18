@@ -1,0 +1,139 @@
+.contact {
+  background-color: var(--off-white);
+}
+
+.contact__header {
+  margin-bottom: var(--space-16);
+  max-width: 520px;
+}
+
+.contact__eyebrow {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+}
+
+.contact__headline {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: var(--space-4);
+}
+
+.contact__subhead {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.contact__options {
+  display: flex;
+  gap: var(--space-12);
+  align-items: flex-start;
+}
+
+.contact__option {
+  flex: 1;
+}
+
+.contact__option-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: var(--space-3);
+}
+
+.contact__option-description {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.contact__divider {
+  width: 1px;
+  background-color: #D1D5DB;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contact__input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  background-color: var(--white);
+  border: 1px solid #D1D5DB;
+  border-radius: var(--border-radius);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.contact__input:focus {
+  border-color: var(--navy);
+}
+
+.contact__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact__btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--border-radius);
+  transition: opacity var(--transition);
+  text-align: center;
+  cursor: pointer;
+}
+
+.contact__btn:hover {
+  opacity: 0.85;
+}
+
+.contact__btn--primary {
+  background-color: var(--navy);
+  color: var(--white);
+  width: 100%;
+}
+
+.contact__btn--ghost {
+  background-color: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .contact__options {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .contact__divider {
+    width: 100%;
+    height: 1px;
+    align-self: auto;
+  }
+
+  .contact__headline {
+    font-size: var(--text-3xl);
+  }
+}

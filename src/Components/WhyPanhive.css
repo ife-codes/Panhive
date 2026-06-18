@@ -1,0 +1,76 @@
+.why {
+  background-color: var(--navy);
+}
+
+.why__header {
+  margin-bottom: var(--space-16);
+  max-width: 600px;
+}
+
+.why__eyebrow {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+}
+
+.why__headline {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: var(--space-6);
+}
+
+.why__subhead {
+  font-size: var(--text-lg);
+  color: var(--text-on-dark);
+  line-height: 1.7;
+}
+
+.why__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.why__card {
+  background-color: var(--navy-light);
+  border-radius: var(--border-radius);
+  padding: var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.why__card-accent {
+  width: 2.5rem;
+  height: 2px;
+  background-color: var(--accent);
+  margin-bottom: var(--space-6);
+}
+
+.why__card-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: var(--space-3);
+}
+
+.why__card-description {
+  font-size: var(--text-base);
+  color: var(--text-on-dark);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .why__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why__headline {
+    font-size: var(--text-3xl);
+  }
+}
