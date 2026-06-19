@@ -1,5 +1,5 @@
 import './WhyPanhive.css'
-import useInView from '../hooks/useInView'
+import useInView from '../hooks/UseInView'
 
 const reasons = [
   {

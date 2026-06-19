@@ -1,5 +1,5 @@
 import './Contact.css'
-import useInView from '../hooks/useInView'
+import useInView from '../hooks/UseInView'
 
 export default function Contact() {
   const [headerRef, headerInView] = useInView()

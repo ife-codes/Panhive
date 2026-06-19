@@ -1,5 +1,5 @@
 import './HowItWorks.css'
-import useInView from '../hooks/useInView'
+import useInView from '../hooks/UseInView'
 
 const steps = [
   {
