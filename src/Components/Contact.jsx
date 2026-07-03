@@ -5,14 +5,23 @@ export default function Contact() {
   const [headerRef, headerInView] = useInView()
   const [optionsRef, optionsInView] = useInView()
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    const name = form.name.value
-    const company = form.company.value
-    const message = form.message.value
-    window.location.href = `mailto:barakatakinmoyero@gmail.com?subject=Enquiry from ${company}&body=Name: ${name}%0ACompany: ${company}%0A%0A${message}`
+const handleSubmit = async (e) => {
+  e.preventDefault()
+  const form = e.target
+
+  const res = await fetch('https://formspree.io/f/xrewrgrv', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: new FormData(form)
+  })
+
+  if (res.ok) {
+    form.reset()
+    alert('Message sent. We will get back to you within one business day.')
+  } else {
+    alert('Something went wrong. Please email us directly at panhive.io@gmail.com')
   }
+}
 
   return (
     <section className="contact section" id="contact">
@@ -62,8 +71,8 @@ export default function Contact() {
           <div className={`contact__option fade-up delay-3 ${optionsInView ? 'is-visible' : ''}`}>
             <h3 className="contact__option-title">Email directly</h3>
             <p className="contact__option-description">We read everything.</p>
-            <a href="mailto:barakatakinmoyero@gmail.com" className="contact__btn contact__btn--ghost">
-              barakatakinmoyero@gmail.com
+            <a href="mailto:panhive.io@gmail.com" className="contact__btn contact__btn--ghost">
+              panhive.io@gmail.com
             </a>
           </div>
         </div>
